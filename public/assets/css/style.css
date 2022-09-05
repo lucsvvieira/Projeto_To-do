@@ -62,6 +62,7 @@ main {
 section.graph {
     width: 33%;
     height: 100%;
+    padding: 5px;
 }
 
 .graph_header {
@@ -74,11 +75,35 @@ h2 {
 }
 
 hr.linhaHeader {
-    flex: 1;
-    width: 50px;
+    width: 30px;
     display: inline-block;
 }
 
 .graph_header-subtitle {
     margin-top: 10px;
+}
+
+.graph-placeholder {
+    background-color: #ccc;
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+    margin-left: 140px;
+}
+
+.graph_header-tasks_left {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.list {
+    padding: 5px 15px;
+}
+
+.list_header {
+    display: flex;
+}
+
+.list_header-select {
+
 }
