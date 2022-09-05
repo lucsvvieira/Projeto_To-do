@@ -60,7 +60,25 @@ main {
 }
 
 section.graph {
-    background-color: teal;
     width: 33%;
     height: 100%;
+}
+
+.graph_header {
+    justify-content: space-between;
+}
+
+h2 {
+    flex: 1;
+    display: inline-block;
+}
+
+hr.linhaHeader {
+    flex: 1;
+    width: 50px;
+    display: inline-block;
+}
+
+.graph_header-subtitle {
+    margin-top: 10px;
 }
