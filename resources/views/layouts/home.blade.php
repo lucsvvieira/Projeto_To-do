@@ -11,6 +11,15 @@
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-    oi
+    <div class="container">
+        <div class="sidebar">
+            Logo
+        </div>
+        <div class="content">
+            <nav>
+                <a href="#" class="btn btn-primary"> Criar Tarefa </a>
+            </nav>
+        </div>
+    </div>
 </body>
 </html>
