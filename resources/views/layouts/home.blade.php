@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <div class="sidebar">
-            Logo
+            <img src="/assets/images/logo.png" alt="">
         </div>
         <div class="content">
             <nav>
@@ -54,7 +54,12 @@
                                 <div>Título da tarefa</div>
                             </div>
                             <div class="actions">
-                                Editar - Excluir
+                                <a href="#">
+                                    <img src="/assets/images/icon-edit.png" alt="">
+                                </a>
+                                <a href="#">
+                                    <img src="/assets/images/icon-delete.png" alt="">
+                                </a>
                             </div>
                         </div>
                         <div class="task">
