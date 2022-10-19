@@ -1,8 +1,8 @@
 <x-layout>
 
     <x-slot:btn>
-        <a href="{{route('task.create')}}" class="btn btn-primary">
-            Criar Tarefa 
+        <a href="{{ route('task.create') }}" class="btn btn-primary">
+            Criar Tarefa
         </a>
     </x-slot:btn>
 
@@ -12,7 +12,7 @@
             <div class="graph_header-line"></div>
             <div class="graph_header-date">
                 <img src="/assets/images/icon-prev.png" alt="">
-                    13 de Dez
+                13 de Dez
                 <img src="/assets/images/icon-next.png" alt="">
             </div>
         </div>
@@ -37,16 +37,10 @@
             </select>
         </div>
         <div class="task_list">
-            @php
-                $tasks = [
-                    [ 'id' => 1, 'done' => false, 'title' => 'Minha Primeira Task', 'category' => 'Categoria 1'],
-                    [ 'id' => 2, 'done' => true, 'title' => 'Minha Segunda Task', 'category' => 'Categoria 2'],
-                    [ 'id' => 3, 'done' => false, 'title' => 'Minha Terceira Task', 'category' => 'Categoria 1']
-                ]
-            @endphp
-            <x-task :data=$tasks[0] />
-            <x-task :data=$tasks[1] />
-            <x-task :data=$tasks[2] />
+
+            @foreach ($tasks as $task)
+                <x-task :data=$task />
+            @endforeach
         </div>
     </section>
 </x-layout>
