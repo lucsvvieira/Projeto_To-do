@@ -11,8 +11,11 @@
             @csrf
 
             <input type="hidden" name="id" value="{{$task->id}}" />
-
+            
+            <x-form.checkbox_input name="is_done" label="Tarefa Realizada?" checked="{{$task->is_done}}"/>
+                
             <x-form.text_input name="title" label="Título da Task" placeholder="Digite o título da sua task" value="{{$task->title}}" />
+
 
             <x-form.text_input type="datetime-local" name="due_date" label="Data de Realização" value="{{$task->due_date}}"/>
 
