@@ -1,9 +1,24 @@
 <x-layout page="B7Web Todo: Login">
-    <x-slot:btn>
-        <a href="{{route('login')}}" class="btn btn-primary">
-            Já possui conta? Faça o login
-        </a>
-    </x-slot:btn>
+        <x-slot:btn>
+            <a href="{{ route('home') }}" class="btn btn-primary">
+                Voltar
+            </a>
+        </x-slot:btn>
+    
+        <section id="task_section">
+            <h1>Registrar-se</h1>
+            <form method="POST" action="{{route('user.register_action')}}">
+                @csrf
+    
+                <x-form.text_input name="name" label="Nome" placeholder="Digite seu nome completo" required="required" />
+    
+                <x-form.text_input type="email" name="email" label="E-mail" placeholder="Digite seu e-mail" required="required" />
 
-    Tela de Registro
+                <x-form.text_input type="password" name="password" label="Senha" placeholder="Digite Sua Senha" required="required" />
+    
+                <x-form.form_button resetTxt="Limpar" submitTxt="Registrar-se" />
+    
+            </form>
+        </section>
+    
 </x-layout>
