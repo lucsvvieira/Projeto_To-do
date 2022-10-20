@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class TaskController extends Controller
@@ -12,8 +13,12 @@ class TaskController extends Controller
     }
 
     public function create(Request $request) {
+
+        $categories = Category::all();
+
+        $data['categories'] = $categories;
         
-        return view('tasks.create');
+        return view('tasks.create', $data);
         
     }
 
